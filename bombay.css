@@ -1,0 +1,575 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+@font-face {
+    font-family: lato-bold;
+    src: url('./fontFamilies/Lato/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: lato-regular;
+    src: url('./fontFamilies/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: lato-light;
+    src: url('./fontFamilies/Lato/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: playfair-bold;
+    src: url('./fontFamilies/PlayFairFont/PlayfairDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: playfair-regular;
+    src: url('./fontFamilies/PlayFairFont/PlayfairDisplay-Regular.ttf');
+}
+
+/* header */
+header{
+    background-color: #000000;
+    background-image: url(./Images/bannerBg.png);
+    background-size: cover;
+    
+}
+
+
+.navbar-bg{
+    background-color: #BF9931;
+    width: 100%;
+}
+
+.logo{
+    position: relative;
+    animation: logo 3s infinite reverse;
+  }
+  
+@keyframes logo {
+    from {top: 10px;}
+    to {bottom: 0px;}
+  }
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+li i{
+    color: #ffffff;
+}
+
+header li a {
+    font-family: lato-bold;
+}
+
+header li a::after, footer h3::after{
+    content:'';
+    width:0;
+    height:2px;
+    background-color:orange;
+    display:block;
+}
+header li a:hover::after,footer h3:hover::after{
+    width:50%;
+    color: orange;
+    transition: width 0.5s linear;
+    
+}
+
+header li a:hover{
+    color: orange !important
+}
+
+.nav-items-link{
+    width: 100%;
+}
+.first-links li a{
+    font-size: 1.5rem;
+    transition: 0.4s linear all;
+}
+
+.first-links li a:hover{
+    
+    color: green;
+    
+}
+
+
+.second-links li a{
+    font-size: 1.6rem;
+}
+
+/* banner-section */
+.banner-section h2{
+    font-family: playfair-bold;
+    padding-top: 155px;
+    padding-bottom: 229px;
+    max-width: 830px;
+    font-size: 8.0rem;
+    transition: 0.4s linear;
+    color: #ffffff;
+}
+
+.banner-section h2:hover{
+    color: green;
+}
+
+/* establishment-section */
+
+.establishment-section{
+    box-shadow: 0px -17px 99px;
+}
+
+.establishment-section h5{
+    padding-top: 156px;
+    font-size: 4.0rem;
+    font-family: playfair-regular;
+}
+.establishment-section p{
+    font-family: lato-regular;
+    font-size: 1.8rem;
+}
+
+.establishment-section i{
+    font-size: 4.0rem;
+    color: #484848;
+}
+
+.green-card{
+    position: relative;
+    background-image: url(./Images/greenBg.png);
+    background-size: cover;
+    margin-top: 101px;
+    color: #ffffff;
+}
+
+.green-card h5{
+    font-size: 4.0rem;
+    font-family: playfair-regular;
+    
+}
+
+.green-card p{
+    font-family: lato-regular;
+    font-size: 1.8rem;
+    padding-bottom: 60px;
+}
+
+.green-card .day{
+    font-family: lato-light;
+    font-size: 6.0rem;
+}
+.green-card .month{
+    font-family: lato-regular;
+    font-size: 2.0rem;
+    max-width: 46px;
+    
+}
+
+.date-container{
+    padding-bottom: 300px;
+
+}
+.palm-img{
+    width: 70%;
+    position: absolute;
+    bottom: 0px;
+    right: 220px;
+}
+
+.webinar-card-head{
+    font-family: lato-bold;
+    max-width: 286px;
+    font-size: 2.0rem;
+}
+
+.webinar-card-sub-head{
+    font-family: lato-bold;
+    font-size: 1.8rem;
+}
+
+.webinar-card-text{
+    font-family: lato-regular;
+    max-width: 280px;
+    font-size: 1.5rem;
+}
+
+.Interactive-card{
+    /* width: 349px;
+    height: 310px; */
+    position: absolute;
+    /* bottom: -50px; */
+    right: 0px;
+    /* bottom: 0px; */
+    bottom: 0px;
+    color: #00523E;
+}
+
+.Interactive-card i{
+    font-size: 4.0rem;
+    color: #484848;
+    font-weight: normal;
+}
+
+
+/* services-section */
+
+.bc-container{
+    /* margin-top: 132px; */
+    position: relative;
+    
+}
+.bc-img{
+    margin-top: 132px;
+    /* position: absolute;
+    right: 125px; */
+}
+.bc-time{
+    color: #DAAB81;
+    font-size: 2.9rem;
+    padding-top: 220px;
+    position: absolute;
+    right: 30px;
+    bottom: 50%;
+    /* padding-right: 190px; */
+}
+
+.bc-text{
+    font-size: 4.0rem;
+    max-width: 398px;
+    font-family: playfair-regular;
+}
+
+.service-card{
+    height: 156px;
+    width: 156px;
+    /* font-size: 1.4rem; */
+    transform: translateY(120px);  
+    opacity: 0;
+
+}
+
+.service-card.active{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease 0.8s;
+}
+.service-card p{
+    max-width: 80px;
+    font-size: 1.4rem;
+    font-family: lato-regular;
+}
+
+.card-2{
+    background-color: #AF671E;
+}
+.card-3{
+    background-color:#309174;
+}
+.card-4{
+    background-color: #FFFFFF;
+}
+.card-5{
+    background-color: #305291;
+}
+.card-6{
+    background-color: #EADEC0;
+}
+.card-7{
+    height:155px;
+    width:312px;
+}
+.card-8{
+    background-color: #AF671E;
+}
+.card-9{
+    background-color: #DAAB81;
+}
+.card-10{
+    background-color: #005A41;
+}
+
+.service-card:hover,.service-img:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 19px;
+}
+.service-img{
+    width: 158px;
+    height: 312px;
+}
+
+.card-service{
+    font-size: 4.0rem;
+    /* max-width: 228px; */
+    font-family: playfair-regular;
+}
+
+/* press-releases-section */
+
+.scholar-card{
+    height: 100%;
+    background-color: black;
+    /* position: relative; */
+}
+.press-release-1{
+    padding-top: 71px;
+}
+.press-release-1 h3{
+    font-family: playfair-regular;
+    font-size: 4.0rem;
+
+}
+.press-release-1 p{
+    font-family: lato-bold;
+    font-size: 1.8rem;
+}
+.carousel-icon{
+    color: #000000;
+    font-size: 4.0rem;
+}
+
+.carousel-container-1{
+    position: relative;
+}
+.img-1{
+    position: absolute;
+    bottom: 0px;
+}
+.arrows{
+    width: 360px;
+    max-width: 100%;
+}
+.button-arrow{
+    border-width: 0;
+    background-color: transparent;
+    color: white;
+   
+}
+
+.button-arrow i{
+    font-size: 4.0rem;
+
+}
+.slider-text{
+    font-size:1.5rem;
+}
+
+/* footer-section */
+
+footer{
+    background-color: #3C2F21;
+    color: #ffffff;
+    background-image: url('./Images/FooterBg.png');
+    background-size: cover;
+    
+}
+
+footer h3{
+    max-width: 240px;
+    font-size: 1.8rem;
+}
+
+footer a{
+    font-size: 1.5rem;
+    transition: 0.4s linear;
+}
+
+footer a:hover{
+    color: orange;
+}
+
+address{
+    font-size: 1.5rem;
+    max-width: 261px;
+}
+.Copyright-text{
+    max-width: 248px;
+    font-size: 1.5rem;
+    transition: 0.4s linear;
+}
+.Copyright-text:hover{
+    color: red;
+}
+
+footer a{
+    color: #ffffff;
+}
+.icon{
+    font-size: 2.0rem;
+}
+
+.social-icons{
+    max-width: 300px;
+}
+
+.social-icon{
+    transition: 0.4s all;
+    
+}
+
+.social-icon:hover{
+    transform: rotate(360deg);
+    color: blue;
+}
+
+/* media-queries */
+
+@media  screen and (max-width:624px) {
+
+    .bc-time{
+        font-size: 1.5rem;
+    }
+
+
+    /* services-section */
+    .card-service{
+        font-size: 2.0rem;
+        width: 85px;
+    }
+
+    .service-card{
+        width: 85px;
+        height: 120px;
+    }
+    .service-img{
+        height:240px;
+        width:140px;
+    }
+
+    .card-7{
+        height:120px;
+        width: 85px;
+        
+    }
+    .icon{
+        font-size: 1.5rem;
+    }
+     
+    .carousel-icon, .button-arrow i{
+        font-size: 3.0rem;
+    }
+
+    .press-release-1 h3{
+        font-size: 2.5rem;
+    }
+
+    .press-release-1 p{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+   
+    /* header */
+    .first-links li a , .second-links li a {
+        font-size: 1.2rem;
+    }
+
+    .banner-section h2{
+        font-size: 4.0rem;
+    }
+
+    /* establishment-section */
+
+    .establishment-section h5{
+        font-size: 1.6rem;
+    }
+    .establishment-section p{
+       
+        font-size: 1.0rem;
+    }
+
+    
+    .green-card h5{
+       
+        font-size: 1.6rem;
+    }
+
+    .green-card p{
+        font-size: 1.0em;
+        padding-bottom: 60px;
+    }
+    
+    .green-card .day{
+        font-size: 1.8rem;
+    }
+    .green-card .month{
+        font-size: 1.2rem;
+    }
+
+    .palm-img{
+        width: 50%;
+        right: 150px;
+    }
+        /* max-width: 470px; */
+
+    
+    .webinar-card-head{
+        
+        font-size: 1.6rem;
+    }
+    
+    .webinar-card-sub-head{
+        font-size: 1.4rem;
+    }
+    
+    .webinar-card-text{
+        
+        font-size: 1.0rem;
+    }
+
+    .Interactive-card{
+        width: 50%;
+        right: 0px;
+    }
+     .Interactive-card i{
+        font-size: 2.0rem;
+        
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+   /* establishment-section */
+    .palm-img{
+        width: 100%;
+        right: 200px;
+    }
+    .Interactive-card{
+        width: 100%;
+        right: 0px;
+    }
+    
+}
+
+@media screen and (max-width:991px) {
+    .banner-section h2{
+        padding-top: 285px;
+        
+    }    
+}
+
+@media screen and (min-width: 2200px) {
+
+    /* establishment-section */
+     .palm-img{
+         width: 50%;
+         
+     }
+     
+     
+ }
+
+
